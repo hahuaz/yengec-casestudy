@@ -1,7 +1,7 @@
 const resource = '/catapi/'
 export default ($axios) => ({
-  get() {
-    return $axios.$get(`${resource}`)
+  get({ query } = { query: '' }) {
+    return $axios.$get(`${resource}${query}`)
   },
 
   getOne(id) {

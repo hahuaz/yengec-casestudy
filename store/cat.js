@@ -1,17 +1,17 @@
 export const state = () => ({
-  cats: null,
+  cats: [],
 })
 
 export const getters = {
-  getCat(state) {
-    return state.cats?.[0]
+  getCats(state) {
+    return state.cats
   },
 }
 
 export const actions = {
   async fetchCats({ commit }) {
     try {
-      const data = await this.$repositories.cat.get()
+      const data = await this.$repositories.cat.get({ query: '?limit=10' })
       commit('SET_CATS', data)
     } catch (error) {
       console.error(error)
@@ -22,6 +22,6 @@ export const actions = {
 
 export const mutations = {
   SET_CATS(state, payload) {
-    state.cats = payload
+    state.cats = [...state.cats, ...payload]
   },
 }
