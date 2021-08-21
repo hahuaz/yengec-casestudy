@@ -1,0 +1,5 @@
+/* customize vuetify css */
+.v-app-bar,
+.v-toolbar__content {
+  background-color: transparent !important;
+}

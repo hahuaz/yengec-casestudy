@@ -9,7 +9,11 @@ export default ($axios) => ({
   },
 
   create(payload) {
-    return $axios.$post(`${resource}`, payload)
+    return new Promise(function (resolve, reject) {
+      setTimeout(() => {
+        resolve($axios.$post(`${resource}/users`, payload))
+      }, 1000)
+    })
   },
 
   update(id, payload) {
