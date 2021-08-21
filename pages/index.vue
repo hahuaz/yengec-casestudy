@@ -1,7 +1,7 @@
 <template>
   <div>
     hi from index
-    <p @click="getPic">get pic</p>
+    <p class="tw-bg-red-500" @click="getPic">get pic</p>
   </div>
 </template>
 
