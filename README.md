@@ -1,6 +1,7 @@
 # yengec-casestudy
 
 This app created for frontend position at Yengec.
+Deployed app can be found at [gcloud service](https://yengec-casestudy-dot-hahuaz-dev.ue.r.appspot.com/).
 
 # Notes
 
